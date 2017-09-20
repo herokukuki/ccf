@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var parser = require('./../libs/parser');
+var downloader = require('./../libs/downloader');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -22,6 +23,7 @@ router.post('/find', function(req, res, next) {
 router.post('/download', function(req, res, next) {
 	var magnet = req.body.magnet;
 
+	console.log(magnet);
 	downloader(magnet);
 });
 
