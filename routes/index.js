@@ -27,4 +27,8 @@ router.post('/download', function(req, res, next) {
 	downloader(magnet);
 });
 
+router.get('/watch', function(req, res, next) {
+	res.render('watch', { title: 'Watch movie online' });
+});
+
 module.exports = router;

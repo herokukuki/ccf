@@ -1,4 +1,5 @@
 var fs = require('fs');
+var path = require('path');
 
 var torrentStream = require('torrent-stream');
 
@@ -20,6 +21,7 @@ var downloadMovie = (magnet) => {
                 console.log('Torrent file download started');
                 if (format === 'mp4' || format === 'webm' || format === 'ogg' || format === 'mkv') {
                     console.log('matching movie format');
+                    console.log('Save this name: ' + file.name);
                 }
                 else {
                     console.log('non-supported video format or other type of file');
