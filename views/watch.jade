@@ -15,13 +15,11 @@ html
 		script(src='//vjs.zencdn.net/4.12/video.js')
 		link(href='video-quality-selector.css', rel='stylesheet', type='text/css')
 		script(src='video-quality-selector.js')
-		script(src='https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls/5.10.1/videojs-contrib-hls.min.js')
+		script(src='//cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls/5.10.1/videojs-contrib-hls.min.js')
 	body
-		video#my-player.video-js.vjs-default-skin(controls='', width='1280', height='1080', data-setup='{ "plugins" : { "resolutionSelector" : { "default_res" : "720" } } }')
+		video#my-player.video-js.vjs-default-skin(controls='', width='1280', height='720', data-setup='{ "plugins" : { "resolutionSelector" : { "default_res" : "720" } } }')
+			source(src='videos/Anomalous (2016) [YTS.AG]/Anomalous.2016.720p.BluRay.x264-[YTS.AG].mp4', type='video/mp4', data-res='720')
 			source(src='videos/jellyfish-3-mbps-hd-h264.mkv', type='video/mp4', data-res='1080')
-			// 720p
-			source(src='Anomalous (2016) [YTS.AG]/Anomalous.2016.720p.BluRay.x264-[YTS.AG].mp4', type='video/mp4', data-res='720')
-			// 1080p
 			track(label='English', kind='subtitles', srclang='en', src='captions/The.Mummy.2017.1080p.BluRay.x264-GECKOS.EtHD.eng.vtt', default='')
 			track(label='Français', kind='subtitles', srclang='fr', src='captions/The.Mummy.2017.1080p.WEB-DL.6CH.MkvCage.vtt')
 			track(label='Русский', kind='subtitles', srclang='ru', src='captions/The.Mummy.2017.1080p.WEB-DL.DD5.1.H264-FGT.vtt')
